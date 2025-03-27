@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QuadraticEquation_lab2</string>
+    <string name="app_title">Решение квадратного уравнения</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HelloWorld_lab1</string>
+    <string name="app_title">Вывод текста на экран</string>
+    <string name="text_field_input">Введите текст</string>
+    <string name="button_text">Перенести текст</string>
+</resources>
