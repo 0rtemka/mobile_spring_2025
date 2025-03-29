@@ -19,7 +19,7 @@ import com.example.todo_lab4.viewmodel.TaskViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen(viewModel: TaskViewModel, onAddTask: () -> Unit) {
+fun MainScreen(viewModel: TaskViewModel, onAddTask: () -> Unit, onTaskClick: (Int) -> Unit) {
     val tasks by viewModel.allTasks.observeAsState(emptyList())
 
     Scaffold(
@@ -36,7 +36,7 @@ fun MainScreen(viewModel: TaskViewModel, onAddTask: () -> Unit) {
     ) { paddingValues ->
         LazyColumn(modifier = Modifier.padding(paddingValues)) {
             items(tasks) { task ->
-                TaskItem(task = task)
+                TaskItem(task = task, onTaskClick = { onTaskClick(task.id)})
             }
         }
     }
